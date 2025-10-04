@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Vinay Software Solutions | SRE Portal</title>
+<title>Hemanth and kk Software Solutions | SRE Portal</title>
 <link href="images/vinaysoft.jpg" rel="icon">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
@@ -246,7 +246,7 @@
 
 <footer>
     <p>© 2025 Vinay Software Solutions Training & Development Center</p>
-    <p><small>Powered by <a href="https://google.com/">Vinay Software Solutions</a></small></p>
+    <p><small>Powered by <a href="https://google.com/">hemanth kk Software Solutions</a></small></p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
