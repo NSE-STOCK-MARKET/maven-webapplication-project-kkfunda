@@ -1,52 +1,113 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.net.*" %>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>KK FUNDA Home Page</title>
-<link href="images/kkfunda.jpg" rel="icon">
-<!-- Bootstrap CDN -->
+<title>Vinay Software Solutions | SRE Portal</title>
+<link href="images/vinaysoft.jpg" rel="icon">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
 <style>
     body {
-        background: #f9f9f9;
-        font-family: Arial, sans-serif;
+        font-family: "Poppins", Arial, sans-serif;
+        background: #eef2f3;
+        margin: 0;
+        padding: 0;
     }
+
     header {
-        background: linear-gradient(90deg, #007bff, #00c6ff);
-        color: white;
-        padding: 20px;
+        background: linear-gradient(135deg, #007bff, #00c6ff);
+        color: #fff;
+        padding: 40px 20px;
         text-align: center;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
-    h1, h3 {
-        margin: 10px 0;
+
+    header h1 {
+        font-weight: 700;
+        font-size: 2rem;
     }
+
+    header h3 {
+        font-weight: 400;
+        margin-top: 10px;
+        letter-spacing: 1px;
+    }
+
     .info-card {
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
-        padding: 20px;
-        margin: 20px auto;
-        max-width: 700px;
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+        padding: 30px;
+        margin: 30px auto;
+        transition: all 0.3s ease;
+        max-width: 750px;
     }
+
+    .info-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .info-card h3 {
+        color: #007bff;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+
+    hr {
+        margin: 15px 0;
+    }
+
+    .info-card p {
+        font-size: 1rem;
+        color: #333;
+        margin: 6px 0;
+    }
+
+    .info-card a.btn {
+        transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .info-card a.btn:hover {
+        transform: scale(1.05);
+    }
+
+    .contact-card img {
+        border: 3px solid #007bff;
+        transition: transform 0.3s ease;
+    }
+
+    .contact-card img:hover {
+        transform: rotate(5deg) scale(1.05);
+    }
+
     footer {
-        margin-top: 30px;
-        background: #222;
-        color: white;
-        padding: 15px;
+        background: #111;
+        color: #ccc;
         text-align: center;
+        padding: 20px 10px;
+        margin-top: 50px;
+        font-size: 0.9rem;
     }
+
     footer a {
         color: #00c6ff;
         text-decoration: none;
     }
+
+    footer a:hover {
+        text-decoration: underline;
+    }
 </style>
 </head>
+
 <body>
 
 <header>
-    <h1>🚀 Welcome to KK FUNDA SRE Portal 🚀</h1>
+    <h1>🚀 Welcome to Vinay Software Solutions SRE Portal 🚀</h1>
     <h3>Training | Development | Consulting</h3>
 </header>
 
@@ -54,7 +115,7 @@
 
     <!-- Server Info -->
     <div class="info-card">
-        <h3>🌐 Server Side Information</h3>
+        <h3><i class="bi bi-server"></i> Server Information</h3>
         <hr>
         <%
             InetAddress inetAddress = InetAddress.getLocalHost();
@@ -66,37 +127,43 @@
 
     <!-- Client Info -->
     <div class="info-card">
-        <h3>💻 Client Side Information</h3>
+        <h3><i class="bi bi-laptop"></i> Client Information</h3>
         <hr>
         <p><b>Client IP Address:</b> <%= request.getRemoteAddr() %></p>
         <p><b>Client Host Name:</b> <%= request.getRemoteHost() %></p>
     </div>
 
     <!-- Contact Info -->
-    <div class="info-card text-center">
-        <img src="images/kkfunda.jpg" alt="KK FUNDA Logo" width="120" class="mb-3 rounded-circle shadow">
-        <h4>KK FUNDA</h4>
-        <p><b>Address:</b> Martha Halli, Bangalore</p>
-        <p><b>Phone:</b> +91-9676831734</p>
-        <p><b>Email:</b> <a href="mailto:kkeducationblr@gmail.com">kkeducationblr@gmail.com</a></p>
-        <a href="mailto:kkeducation@gmail.com" class="btn btn-primary mt-2">📧 Mail to KK FUNDA</a>
+    <div class="info-card contact-card text-center">
+        <img src="images/vinaysoft.jpg" alt="Vinay Software Solutions Logo" width="130" class="mb-3 rounded-circle shadow">
+        <h4 class="fw-bold">Vinay Software Solutions</h4>
+        <p><i class="bi bi-geo-alt-fill text-primary"></i> Martha Halli, Bangalore</p>
+        <p><i class="bi bi-telephone-fill text-success"></i> +91 96768 31734</p>
+        <p><i class="bi bi-envelope-fill text-danger"></i> 
+            <a href="mailto:vinaysoftblr@gmail.com">vinaysoftblr@gmail.com</a>
+        </p>
+        <a href="mailto:vinaysoftsolutions@gmail.com" class="btn btn-primary mt-3">
+            <i class="bi bi-send-fill"></i> Mail to Vinay Software Solutions
+        </a>
     </div>
 
-    <!-- Service Links -->
+    <!-- Services -->
     <div class="info-card text-center">
-        <h4>⚙️ Our Services</h4>
-        <p><a href="services/employee/getEmployeeDetails" class="btn btn-success">Get Employee Details</a></p>
+        <h4><i class="bi bi-tools text-warning"></i> Our Services</h4>
+        <p class="mt-3">
+            <a href="services/employee/getEmployeeDetails" class="btn btn-success px-4">
+                <i class="bi bi-person-lines-fill"></i> Get Employee Details
+            </a>
+        </p>
     </div>
 
 </div>
 
 <footer>
-    <p>© 2024 KK FUNDA Training & Development Center</p>
-    <p><small>Powered by <a href="https://google.com/">KK FUNDA</a></small></p>
+    <p>© 2025 Vinay Software Solutions Training & Development Center</p>
+    <p><small>Powered by <a href="https://google.com/">Vinay Software Solutions</a></small></p>
 </footer>
 
-<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
