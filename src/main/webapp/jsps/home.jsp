@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Hemanth and kk Software Solutions | SRE Portal</title>
-<link href="images/vinaysoft.jpg" rel="icon">
+<link href="images/hemanthsoft.jpg" rel="icon">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
@@ -128,7 +128,7 @@
 <body>
 
 <header>
-    <h1>🚀 Welcome to Vinay Software Solutions SRE Portal 🚀</h1>
+    <h1>🚀 Welcome to hemanth Software Solutions SRE Portal 🚀</h1>
     <h3>Training | Development | Consulting</h3>
 </header>
 
@@ -156,15 +156,15 @@
 
     <!-- Contact Info -->
     <div class="info-card contact-card text-center">
-        <img src="images/vinaysoft.jpg" alt="Vinay Software Solutions Logo" width="130" class="mb-3 rounded-circle shadow">
-        <h4 class="fw-bold">Vinay Software Solutions</h4>
+        <img src="images/hemanthsoft.jpg" alt="hemanth Software Solutions Logo" width="130" class="mb-3 rounded-circle shadow">
+        <h4 class="fw-bold">hemanth Software Solutions</h4>
         <p><i class="bi bi-geo-alt-fill text-primary"></i> Martha Halli, Bangalore</p>
         <p><i class="bi bi-telephone-fill text-success"></i> +91 96768 31734</p>
         <p><i class="bi bi-envelope-fill text-danger"></i> 
-            <a href="mailto:vinaysoftblr@gmail.com">vinaysoftblr@gmail.com</a>
+            <a href="mailto:hemanthsoftblr@gmail.com">hemanthsoftblr@gmail.com</a>
         </p>
-        <a href="mailto:vinaysoftsolutions@gmail.com" class="btn btn-primary mt-3">
-            <i class="bi bi-send-fill"></i> Mail to Vinay Software Solutions
+        <a href="mailto:hemanthsoftsolutions@gmail.com" class="btn btn-primary mt-3">
+            <i class="bi bi-send-fill"></i> Mail to hemanth Software Solutions
         </a>
     </div>
 
@@ -245,7 +245,7 @@
 </section>
 
 <footer>
-    <p>© 2025 Vinay Software Solutions Training & Development Center</p>
+    <p>© 2025 hemanth Software Solutions Training & Development Center</p>
     <p><small>Powered by <a href="https://google.com/">hemanth kk Software Solutions</a></small></p>
 </footer>
 
