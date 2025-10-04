@@ -4,8 +4,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Hemanth and kk Software Solutions | SRE Portal</title>
-<link href="images/hemanthsoft.jpg" rel="icon">
+<title>nani and kk Software Solutions | SRE Portal</title>
+<link href="images/nanisoft.jpg" rel="icon">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
@@ -128,7 +128,7 @@
 <body>
 
 <header>
-    <h1>🚀 Welcome to hemanth Software Solutions SRE Portal 🚀</h1>
+    <h1>🚀 Welcome to nani Software Solutions SRE Portal 🚀</h1>
     <h3>Training | Development | Consulting</h3>
 </header>
 
@@ -156,15 +156,15 @@
 
     <!-- Contact Info -->
     <div class="info-card contact-card text-center">
-        <img src="images/hemanthsoft.jpg" alt="hemanth Software Solutions Logo" width="130" class="mb-3 rounded-circle shadow">
-        <h4 class="fw-bold">hemanth Software Solutions</h4>
+        <img src="images/nanisoft.jpg" alt="nani Software Solutions Logo" width="130" class="mb-3 rounded-circle shadow">
+        <h4 class="fw-bold">nani Software Solutions</h4>
         <p><i class="bi bi-geo-alt-fill text-primary"></i> Martha Halli, Bangalore</p>
         <p><i class="bi bi-telephone-fill text-success"></i> +91 96768 31734</p>
         <p><i class="bi bi-envelope-fill text-danger"></i> 
-            <a href="mailto:hemanthsoftblr@gmail.com">hemanthsoftblr@gmail.com</a>
+            <a href="mailto:nanisoftblr@gmail.com">nanisoftblr@gmail.com</a>
         </p>
-        <a href="mailto:hemanthsoftsolutions@gmail.com" class="btn btn-primary mt-3">
-            <i class="bi bi-send-fill"></i> Mail to hemanth Software Solutions
+        <a href="mailto:nanisoftsolutions@gmail.com" class="btn btn-primary mt-3">
+            <i class="bi bi-send-fill"></i> Mail to nani Software Solutions
         </a>
     </div>
 
@@ -245,8 +245,8 @@
 </section>
 
 <footer>
-    <p>© 2025 hemanth Software Solutions Training & Development Center</p>
-    <p><small>Powered by <a href="https://google.com/">hemanth kk Software Solutions</a></small></p>
+    <p>© 2025 nani Software Solutions Training & Development Center</p>
+    <p><small>Powered by <a href="https://google.com/">nani kk Software Solutions</a></small></p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
