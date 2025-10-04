@@ -1,154 +1,169 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	
-	<groupId>com.kk</groupId>
-	<artifactId>maven-web-application-kkfunda</artifactId>
-	<packaging>war</packaging>
-	<version>0.0.1-SNAPSHOT</version>
-	
-	<name>maven-web-application</name>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="java.net.*" %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Vinay Software Solutions | SRE Portal</title>
+<link href="images/vinaysoft.jpg" rel="icon">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
-	<description>Maven Web Project for Java Project</description>
+<style>
+    body {
+        font-family: "Poppins", Arial, sans-serif;
+        background: #eef2f3;
+        margin: 0;
+        padding: 0;
+    }
 
-	<organization>
-		<name>KK FUNDA</name>
-		<url>http://kkfunda.com</url>
-	</organization>
+    header {
+        background: linear-gradient(135deg, #007bff, #00c6ff);
+        color: #fff;
+        padding: 40px 20px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
 
-	<properties>
-		<jdk.version>17</jdk.version>
-		<spring.version>5.3.34</spring.version>
-		<junit.version>4.11</junit.version>
-		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://3.88.63.192:9000/</sonar.host.url>
-		<sonar.login>admin</sonar.login>
-		<sonar.password>Santhosh0166@</sonar.password> 
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    header h1 {
+        font-weight: 700;
+        font-size: 2rem;
+    }
 
-	</properties>
+    header h3 {
+        font-weight: 400;
+        margin-top: 10px;
+        letter-spacing: 1px;
+    }
 
-	<dependencies>
-		
-		<dependency>
-			<groupId>org.json</groupId>
-			<artifactId>json</artifactId>
-			<version>20231013</version>
-		</dependency>
-		
-		<!-- test dependencies -->
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
-			<scope>test</scope>
-		</dependency>
+    .info-card {
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+        padding: 30px;
+        margin: 30px auto;
+        transition: all 0.3s ease;
+        max-width: 750px;
+    }
 
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>3.1.0</version>
-			<scope>provided</scope>
-		</dependency>
+    .info-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
 
-		<dependency>
-			<groupId>org.mockito</groupId>
-			<artifactId>mockito-core</artifactId>
-			<version>1.9.5</version>
-			<scope>test</scope>
-		</dependency>
+    .info-card h3 {
+        color: #007bff;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
 
-		<!-- compile dependencies -->
+    hr {
+        margin: 15px 0;
+    }
 
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-core</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-		<dependency>
-    		<groupId>org.springframework</groupId>
-    		<artifactId>spring-web</artifactId>
-    		<version>${spring.version}</version>
-  		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-		
-		<!-- provided dependencies -->
+    .info-card p {
+        font-size: 1rem;
+        color: #333;
+        margin: 6px 0;
+    }
 
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>3.1.0</version>
-			<scope>provided</scope>
-		</dependency>
-		
-	</dependencies>
-	
-	<distributionManagement>
-	
-	    <repository>
-	      <id>nexus</id>
-	      <name>KK FUNDA Releases Nexus Repository</name>
-	      <url>http://3.84.179.58:8081/repository/maven-releases/</url>
-	    </repository>
-	    
-	    <snapshotRepository>
-	      <id>nexus</id>
-	      <name>KK FUNDA Snapshot Nexus Repository </name>
-	      <url>http://3.84.179.58:8081/repository/maven-snapshots/</url>
-	    </snapshotRepository>
-	    
-	</distributionManagement>
-	
-	<build>
-		<finalName>maven-web-application</finalName>
-		
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.3</version>
-				<configuration>
-					<source>${jdk.version}</source>
-					<target>${jdk.version}</target>
-				</configuration>
-			</plugin>
+    .info-card a.btn {
+        transition: background 0.3s ease, transform 0.2s ease;
+    }
 
-			<plugin>
-				<groupId>org.eclipse.jetty</groupId>
-				<artifactId>jetty-maven-plugin</artifactId>
-				<version>9.2.11.v20150529</version>
-				<configuration>
-					<scanIntervalSeconds>10</scanIntervalSeconds>
-					<webApp>
-						<contextPath>/maven-web-application</contextPath>
-					</webApp>
-				</configuration>
-			</plugin>
+    .info-card a.btn:hover {
+        transform: scale(1.05);
+    }
 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-eclipse-plugin</artifactId>
-				<version>2.9</version>
-				<configuration>
-					<downloadSources>true</downloadSources>
-					<downloadJavadocs>true</downloadJavadocs>
-					<wtpversion>2.0</wtpversion>
-					<wtpContextName>maven-web-application</wtpContextName>
-				</configuration>
-			</plugin>
-			
-</plugins>
-	</build>
-	
-	
-</project>
+    .contact-card img {
+        border: 3px solid #007bff;
+        transition: transform 0.3s ease;
+    }
+
+    .contact-card img:hover {
+        transform: rotate(5deg) scale(1.05);
+    }
+
+    footer {
+        background: #111;
+        color: #ccc;
+        text-align: center;
+        padding: 20px 10px;
+        margin-top: 50px;
+        font-size: 0.9rem;
+    }
+
+    footer a {
+        color: #00c6ff;
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🚀 Welcome to Vinay Software Solutions SRE Portal 🚀</h1>
+    <h3>Training | Development | Consulting</h3>
+</header>
+
+<div class="container">
+
+    <!-- Server Info -->
+    <div class="info-card">
+        <h3><i class="bi bi-server"></i> Server Information</h3>
+        <hr>
+        <%
+            InetAddress inetAddress = InetAddress.getLocalHost();
+            String ip = inetAddress.getHostAddress();
+            out.println("<p><b>Server Host Name:</b> " + inetAddress.getHostName() + "</p>");
+            out.println("<p><b>Server IP Address:</b> " + ip + "</p>");
+        %>
+    </div>
+
+    <!-- Client Info -->
+    <div class="info-card">
+        <h3><i class="bi bi-laptop"></i> Client Information</h3>
+        <hr>
+        <p><b>Client IP Address:</b> <%= request.getRemoteAddr() %></p>
+        <p><b>Client Host Name:</b> <%= request.getRemoteHost() %></p>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="info-card contact-card text-center">
+        <img src="images/vinaysoft.jpg" alt="Vinay Software Solutions Logo" width="130" class="mb-3 rounded-circle shadow">
+        <h4 class="fw-bold">Vinay Software Solutions</h4>
+        <p><i class="bi bi-geo-alt-fill text-primary"></i> Martha Halli, Bangalore</p>
+        <p><i class="bi bi-telephone-fill text-success"></i> +91 96768 31734</p>
+        <p><i class="bi bi-envelope-fill text-danger"></i> 
+            <a href="mailto:vinaysoftblr@gmail.com">vinaysoftblr@gmail.com</a>
+        </p>
+        <a href="mailto:vinaysoftsolutions@gmail.com" class="btn btn-primary mt-3">
+            <i class="bi bi-send-fill"></i> Mail to Vinay Software Solutions
+        </a>
+    </div>
+
+    <!-- Services -->
+    <div class="info-card text-center">
+        <h4><i class="bi bi-tools text-warning"></i> Our Services</h4>
+        <p class="mt-3">
+            <a href="services/employee/getEmployeeDetails" class="btn btn-success px-4">
+                <i class="bi bi-person-lines-fill"></i> Get Employee Details
+            </a>
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2025 Vinay Software Solutions Training & Development Center</p>
+    <p><small>Powered by <a href="https://google.com/">Vinay Software Solutions</a></small></p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
