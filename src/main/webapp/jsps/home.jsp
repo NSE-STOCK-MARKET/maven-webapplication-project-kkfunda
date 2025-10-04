@@ -15,6 +15,7 @@
         background: #eef2f3;
         margin: 0;
         padding: 0;
+        scroll-behavior: smooth;
     }
 
     header {
@@ -43,7 +44,7 @@
         padding: 30px;
         margin: 30px auto;
         transition: all 0.3s ease;
-        max-width: 750px;
+        max-width: 850px;
     }
 
     .info-card:hover {
@@ -51,37 +52,57 @@
         box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
 
-    .info-card h3 {
+    .info-card h3, .info-card h4 {
         color: #007bff;
         font-weight: 600;
         margin-bottom: 15px;
     }
 
-    hr {
-        margin: 15px 0;
+    .course-section {
+        background: linear-gradient(135deg, #00c6ff, #007bff);
+        color: white;
+        padding: 50px 20px;
+        text-align: center;
     }
 
-    .info-card p {
-        font-size: 1rem;
+    .course-card {
+        background: white;
+        border-radius: 20px;
+        padding: 25px;
         color: #333;
-        margin: 6px 0;
+        transition: all 0.3s ease;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.1);
     }
 
-    .info-card a.btn {
-        transition: background 0.3s ease, transform 0.2s ease;
-    }
-
-    .info-card a.btn:hover {
+    .course-card:hover {
         transform: scale(1.05);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.2);
     }
 
-    .contact-card img {
-        border: 3px solid #007bff;
-        transition: transform 0.3s ease;
+    .course-card i {
+        font-size: 2.5rem;
+        color: #007bff;
+        margin-bottom: 15px;
     }
 
-    .contact-card img:hover {
-        transform: rotate(5deg) scale(1.05);
+    .logs-section {
+        background: #f8f9fa;
+        padding: 50px 20px;
+    }
+
+    .log-card {
+        background: #fff;
+        border-left: 5px solid #007bff;
+        padding: 15px 20px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+    }
+
+    .log-card:hover {
+        transform: translateX(5px);
+        box-shadow: 0 6px 14px rgba(0,0,0,0.1);
     }
 
     footer {
@@ -158,6 +179,70 @@
     </div>
 
 </div>
+
+<!-- Courses Section -->
+<section class="course-section">
+    <div class="container">
+        <h2 class="fw-bold mb-4">💻 Popular Computer Courses</h2>
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="course-card">
+                    <i class="bi bi-code-slash"></i>
+                    <h5>Full Stack Java</h5>
+                    <p>Learn Spring Boot, REST APIs, Hibernate, and modern frontend frameworks.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="course-card">
+                    <i class="bi bi-cloud-arrow-up"></i>
+                    <h5>DevOps & SRE</h5>
+                    <p>Master Jenkins, Docker, Kubernetes, CI/CD, and AWS Cloud deployment.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="course-card">
+                    <i class="bi bi-shield-lock"></i>
+                    <h5>Cyber Security</h5>
+                    <p>Hands-on ethical hacking, network protection, and incident response.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="course-card">
+                    <i class="bi bi-bar-chart-line"></i>
+                    <h5>Data Analytics</h5>
+                    <p>Power BI, Python, and SQL for real-world business insights.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Logs Section -->
+<section class="logs-section">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-4"><i class="bi bi-journal-text"></i> Training Activity Logs</h2>
+
+        <div class="log-card">
+            <i class="bi bi-check-circle-fill text-success"></i> Java Backend Project Deployed on AWS EC2
+            <span class="text-muted float-end">05-Oct-2025</span>
+        </div>
+
+        <div class="log-card">
+            <i class="bi bi-check-circle-fill text-primary"></i> Jenkins CI/CD Pipeline Configured for SRE Training
+            <span class="text-muted float-end">04-Oct-2025</span>
+        </div>
+
+        <div class="log-card">
+            <i class="bi bi-check-circle-fill text-warning"></i> Docker and Kubernetes Cluster Setup Completed
+            <span class="text-muted float-end">03-Oct-2025</span>
+        </div>
+
+        <div class="log-card">
+            <i class="bi bi-check-circle-fill text-danger"></i> GitHub Actions integrated with Nexus Repository
+            <span class="text-muted float-end">02-Oct-2025</span>
+        </div>
+    </div>
+</section>
 
 <footer>
     <p>© 2025 Vinay Software Solutions Training & Development Center</p>
